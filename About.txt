@@ -80,3 +80,19 @@
 14)приложение Simple_Bean-03:
 В приложении показывается как можно сказать Спрингу, какой бин создавать,
  если в springContext.xml содержит несколько бинов одного типа(тоесть несколько объектов одного класса) - опять же пример с аннотацииями.
+ 
+15)приложение Simple_Bean-04:
+пример создания одного бина.
+Важно обратить внимание:
+1.Какие библиотеки подключаются в pom.xml
+2.Как организуется связь между: 
+	SimpleBeanExample:
+		Car4 car4 = context.getBean("car4",Car4.class);
+		
+	springExample.xml:
+		<bean id="car4" class="edu.javacourse.spring.ioc.beans.Car4">
+        <property name="id" value="1"/>
+        <property name="model" value="Subaru"/>
+        <property name="year" value="2020"/>
+        <property name="lastService" ref="currentDate"/>
+    </bean>
