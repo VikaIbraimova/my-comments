@@ -96,3 +96,6 @@
         <property name="year" value="2020"/>
         <property name="lastService" ref="currentDate"/>
     </bean>
+	
+16)приложение Simple_Bean-07:
+В приложении показано как можно организовать тест конструктора без параметров класса Car7 разными способами создавая бин
