@@ -25,9 +25,9 @@ public class Car7Test {
         /**
          * Создаем объект тестируемого класса(создаем бин)
          */
-        Car7 car7_2 = context.getBean("car7",Car7.class);
-        Assert.assertNotNull(car7_2);
-        System.out.println(car7_2.toString());
+        Car7 car7_3 = context.getBean("car7",Car7.class);
+        Assert.assertNotNull(car7_3);
+        System.out.println(car7_3.toString());
 
     }
 
@@ -36,17 +36,6 @@ public class Car7Test {
      */
     @Test
     public void calls() {
-        Car7 car7_3 = context.getBean("car7",Car7.class);
-        /**
-         * Проверяет, что два значения совпадают:
-         */
-        //Assert.assertEquals(0, math.getCalls());
-        Assert.assertEquals(0,car7_3.getCalls());
-
-        //math.factorial(1);
-        //Assert.assertEquals(1, math.getCalls());
-
-        //math.factorial(1);
-        //Assert.assertEquals(2, math.getCalls());
+        Assert.assertEquals(0,context.getBean("car7",Car7.class).getCalls());
     }
 }
